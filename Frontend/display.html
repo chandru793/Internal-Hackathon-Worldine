@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Content</title>
+  </head>
+  <body>
+    <div>
+      <table border="1">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>DOB</td>
+            <td>Gender</td>
+            <td>Address Lane 1</td>
+            <td>Address Lane 2</td>
+            <td>City</td>
+            <td>State</td>
+            <td>Pin Code</td>
+          </tr>
+        </thead>
+        <tbody id="tabody"></tbody>
+      </table>
+    </div>
+
+    <script>
+      function addelem(user) {        
+        const row = document.createElement("tr");
+        row.innerHTML = `
+                <td>${user.id}</td>
+                <td>${user.stud_name}</td>
+                <td>${user.dob}</td>
+                <td>${user.gender}</td>
+                <td>${user.add_1}</td>
+                <td>${user.add_2}</td>
+                <td>${user.city}</td>
+                <td>${user.state_name}</td>
+                <td>${user.pin_code}</td>
+                
+            `;
+        return row;
+      }
+
+      async function getData() {
+        const datas = await fetch("http://localhost:8080/get");
+        const data = await datas.json();
+        const tabody = document.getElementById("tabody");
+        tabody.innerHTML = "";
+        data.forEach((user) => {
+          const row = addelem(user);
+          tabody.appendChild(row);
+        });
+      }
+      getData();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+.sep{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+input{
+    display: flex;
+    margin-top: 5px;
+    width: 350px;
+    padding: 10px;
+    outline: none;
+}
+
+input:hover,
+input:focus,
+input:active,
+button:hover,
+button:focus,
+button:active,
+a:hover,
+a:focus,
+a:active{
+    scale: 1.03;
+}
+button{
+    margin: 10px;
+    padding: 5px;
+    width: 150px;
+    border-radius: 25px;
+    outline: none;
+}
+a{
+    /* text-decoration: none; */
+    font-weight: bold;
+    margin: 10px;
+
+}

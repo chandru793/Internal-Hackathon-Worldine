@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal hackathon</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div>
+        <h1>Student Registration Form</h1>
+      <form id="stud_form">
+        <div class="sep">
+          <label for="stud_name">Student Name:</label>
+          <input
+            type="text"
+            name="stud_name"
+            id="stud_name"
+            placeholder="Student Name"
+            required
+          />
+        </div>
+
+        <div class="sep">
+          <label for="dob">DOB:</label>
+          <input type="date" name="dob" id="dob" placeholder="DOB" required />
+        </div>
+
+        <div class="sep">
+          <label for="gender">Gender:</label>
+          <input
+            type="text"
+            name="gender"
+            id="gender"
+            placeholder="Gender"
+            required
+          />
+        </div>
+
+        <div class="sep">
+          <label for="add_1">Address Lane 1:</label>
+          <input
+            type="text"
+            name="add_1"
+            id="add_1"
+            placeholder="Address Lane 1"
+            required
+          />
+        </div>
+
+        <div class="sep">
+          <label for="add_2">Address Lane 2:</label>
+          <input
+            type="text"
+            name="add_2"
+            id="add_2"
+            placeholder="Address Lane 2"
+            required
+          />
+        </div>
+
+        <div class="sep">
+          <label for="city">City:</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="City"
+            required
+          />
+        </div>
+
+        <div class="sep">
+          <label for="state_name">State:</label>
+          <input
+            type="text"
+            name="state_name"
+            id="state_name"
+            placeholder="State"
+            required
+          />
+        </div>
+
+        <div class="sep">
+          <label for="pin_code">Pincode:</label>
+          <input
+            type="number"
+            name="pin_code"
+            id="pin_code"
+            placeholder="Pincode"
+            required
+          />
+        </div>
+
+        <button onclick="submitform()">Submit</button>
+      </form>
+
+      <a href="./display.html">Display</a>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
